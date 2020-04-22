@@ -1,5 +1,5 @@
 <template>
-  <div class="enemy" :style="{left:left+'px',top:top+'px'}">{{str}}</div>
+  <div class="enemy" :style="{left:left+'px',top:top+'px'}" v-show="killed">{{str}}</div>
 </template>
 
 <script>
@@ -9,7 +9,8 @@ export default {
             top:0,
             left:0,
             timer:null,
-            str:'a'
+            str:'a',
+            killed:true
         }
     },
     mounted(){
